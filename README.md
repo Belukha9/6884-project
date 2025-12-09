@@ -4,7 +4,7 @@ This project implements a complete pipeline for classifying five uterine tissue 
 
 ---
 
-## 🔍 Project Overview
+## Project Overview
 
 Near-infrared spectroscopy provides wavelength–dependent reflectance measurements that encode biochemical and structural tissue information. This project analyzes **91,845 spectra** collected from **95 specimens** across **34 patients**, covering five uterine tissue types:
 
@@ -26,7 +26,7 @@ The objective is to determine the separability of these classes under a **Gaussi
 
 ---
 
-## 🧪 Spectral Preprocessing Pipeline
+## Spectral Preprocessing Pipeline
 
 The preprocessing follows four key steps:
 
@@ -48,7 +48,7 @@ These steps produce two feature sets:
 
 ---
 
-## 📉 Dimensionality Reduction
+## Dimensionality Reduction
 
 Principal Component Analysis (PCA) is applied after standardization:
 
@@ -60,7 +60,7 @@ The transformed features approximate class clusters in a Gaussian-like feature s
 
 ---
 
-## 🤖 Gaussian Generative Classifier
+## Gaussian Generative Classifier
 
 Each tissue class is modeled using:
 
