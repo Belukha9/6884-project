@@ -46,39 +46,6 @@ These steps produce two feature sets:
 - **Original normalized spectra**
 - **First-order derivative spectra**
 
----
-
-## Dimensionality Reduction
-
-Principal Component Analysis (PCA) is applied after standardization:
-
-- Input dimension: **501**
-- Output dimension: **20 PCs**
-- PCA is fit only on the training folds (to avoid data leakage)
-
-The transformed features approximate class clusters in a Gaussian-like feature space.
-
----
-
-## Gaussian Generative Classifier
-
-Each tissue class is modeled using:
-
-- Class mean vector:  
-  \[
-  \mu_c = \frac{1}{N_c}\sum_{i:y_i=c} X_i
-  \]
-
-- Covariance matrix with regularization:  
-  \[
-  \Sigma_c = \operatorname{Cov}(X_i \mid y_i=c) + \epsilon I
-  \]
-
-Prediction uses the Maximum A Posteriori (MAP) rule:
-
-\[
-\hat{y} = \arg\max_c \ \log \pi_c + \log\mathcal{N}(X \mid \mu_c, \Sigma_c)
-\]
 
 
 
